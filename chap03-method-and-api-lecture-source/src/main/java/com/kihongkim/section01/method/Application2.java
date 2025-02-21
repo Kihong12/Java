@@ -1,15 +1,13 @@
 package com.kihongkim.section01.method;
 
-public class Application1 {
+public class Application2 {
     public static void main(String[] args) {
         /* 메소드의 호출 흐름에 때해 이해할 수 있다. */
         System.out.println("main 호출");
 
         /* 별도로 작성한 메소드를 호출한다. */
-        Application1 application1 = new Application1();
-        application1.methodA();
-        application1.methodB();
-        application1.methodC();
+        Application2 application2 = new Application2();
+        application2.methodA();
 
         System.out.println("main 종료");
     }
@@ -18,11 +16,13 @@ public class Application1 {
          * 접근제한자 반환형 메소드명 (매개변수) {} */
         public void methodA() {
             System.out.println("methodA 호출");
+            methodB();
             System.out.println("methodA 종료");
         }
 
         public void methodB () {
             System.out.println("methodB 호출");
+            methodC();
             System.out.println("methodB 종료");
         }
 
